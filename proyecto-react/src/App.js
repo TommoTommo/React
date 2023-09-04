@@ -1,4 +1,7 @@
-import logo from './logo.svg';
+import React from "react";
+
+import Card from "./component/Card/Card";
+
 import './App.css';
 
 function App() {
