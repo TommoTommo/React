@@ -5,10 +5,14 @@ import React from "react";
 
 function App() {
   return (
-   <div> 
+   <React.Fragment>
+    --navbar
+    <switch>
 
 
-   </div>
+    </switch>
+    --footer
+   </React.Fragment>
   );
 }
 
