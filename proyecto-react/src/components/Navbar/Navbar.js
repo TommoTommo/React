@@ -5,9 +5,9 @@ function Menu(){
     return(
         <ul className="genero-titulo-div">
             <Link className="titulo-href" to="/">HOME</Link>
-            <Link className="titulo-href" to="/favoritos">Favoritos</Link>
-            <Link className="titulo-href" to="/Vertodaspelis">Vertodaspelis</Link>
-            <Link className="titulo-href" to="/Vertodaspopulares">Vertodaspopulares</Link>
+            <Link className="titulo-href" to="/favoritos">FAVORITOS</Link>
+            <Link className="titulo-href" to="/Vertodaspelis">VERTODASPELIS</Link>
+            <Link className="titulo-href" to="/Vertodaspopulares">VERTODASPOPULARES</Link>
         </ul>
 
     )
