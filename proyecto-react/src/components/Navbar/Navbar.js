@@ -1,13 +1,13 @@
 
 import { Link } from  'react-router-dom';
-
+import "./Navbar.css"
 function Menu(){
     return(
-        <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/favoritos">Favoritos</Link></li>
-            <li><Link to="/Vertodaspelis">Vertodaspelis</Link></li>
-            <li><Link to="/Vertodaspopulares">Vertodaspopulares</Link></li>
+        <ul className="genero-titulo-div">
+            <Link className="titulo-href" to="/">HOME</Link>
+            <Link className="titulo-href" to="/favoritos">Favoritos</Link>
+            <Link className="titulo-href" to="/Vertodaspelis">Vertodaspelis</Link>
+            <Link className="titulo-href" to="/Vertodaspopulares">Vertodaspopulares</Link>
         </ul>
 
     )
