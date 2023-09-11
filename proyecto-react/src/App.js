@@ -5,6 +5,7 @@ import Favoritos from "./screens/Favoritos/Favoritos";
 import Vertodaspelis from "./screens/Vertodaspelis/Vertodaspelis";
 import Vertodaspopulares from "./screens/Vertodaspopulares/Vertodaspopulares";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Vertodaspopulares" component= { Vertodaspopulares } />
 
       </Switch>
+      <Footer/>
       
   </React.Fragment>
   );

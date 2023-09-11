@@ -10,8 +10,8 @@ function Menu(){
             <Link className="titulo-href" to="/Vertodaspopulares">POPULARES</Link>
             <article class="formulario">
             <form action="./search-results.html" method="get">
-                <input class="cuadro_buscar" type="text" name="Buscador" value="" placeholder=" Iniciar busqueda"/>
-                <button class="buscarbotton" type="submit">Buscar</button>
+                <input className="cuadro_buscar" type="text" name="Buscador" value="" placeholder=" Iniciar busqueda"/>
+                <button className="buscarbotton" type="submit">Buscar</button>
             </form> 
         </article>
         </ul>
