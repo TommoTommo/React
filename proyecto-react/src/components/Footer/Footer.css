@@ -4,6 +4,9 @@
     font-size: 20px;
     color: rgb(255, 255, 255);
     text-align: center;
-    background-color: black;
+    background-color: rgb(102, 102, 102);
     padding: 20px;
+}
+body{
+    background-color: black;
 }
