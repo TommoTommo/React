@@ -1,10 +1,11 @@
-import ListaPersonajes from "../../components/ListaPersonajes/ListaPersonajes";
+import PeliculasConteiner from "../../components/PeliculasConteiner/PeliculasConteiner";
 
 function Home(){
 
     return(
         <section>
         <h1>Home</h1>
+        <PeliculasConteiner />
         </section>
     )
 }
