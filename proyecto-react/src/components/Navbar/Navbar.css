@@ -1,11 +1,32 @@
-.genero-titulo-div{
-    text-align: center;
+.containHeader{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0);
+}
+
+.logo{
+    height: 20vh;
+    width: 10vw;
+    padding: 10px;
 }
 
 .titulo-href{
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
-    color: rgb(217, 24, 24);
-   }
+    color: rgb(255, 255, 255);
+}
+
+.cuadro_buscar{
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: black;
+    padding: 3px;
+    color: white ;
+}
+
+.buscarbotton{
+    border-radius: 10px;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}

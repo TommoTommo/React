@@ -2,7 +2,7 @@
 function Vertodaspelis(){
 
     return(
-        <h1>Vertodaspelis</h1>
+        <h1>Todo</h1>
     )
 }
 
