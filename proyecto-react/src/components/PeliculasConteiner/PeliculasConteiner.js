@@ -1,44 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import Tarjeta from "../Tarjeta/Tarjeta";
 
-
-class PeliculasConteiner extends Component{
-
-    constructor(){
-        super();
-        this.state = {
-           personajes : [],
-        }
+function PeliculasConteiner(props) {
+    // Asegúrate de que props.contenido es un arreglo antes de mapearlo
+    if (!Array.isArray(props.contenido)) {
+      return null; // o puedes manejar el error de otra manera
     }
-
-    componentDidMount(){
-        console.log("En componentDidMount");
-
-        fetch("`https://api.themoviedb.org/3/movie/popular?api_key=f2acabc2f1f7dfa29f6493c2fcca003f`")
-        .then(response => response.json())
-        .then( data => this.setState({
-            peliculas: data.results,
-        }))
-        .catch(e => console.log(e))
-    }
-
-   
-    render(){
-        console.log("Me monté");
-        console.log(this.state)
-        return(
-            <section>
-                { 
-                   this.state.peliculas.map(function(unaPelicula){
-                    return <Tarjeta key={ unaPelicula.id } datosPelicula={ unaPelicula }/>
-                   })
-                }
-            </section>
-        )
-    }
-
-}
-
+    console.log(props.contenido);
+  
+    return (
+      <div>
+        {props.contenido.map(function (unaPelicula) {
+          return <Tarjeta key={unaPelicula.id} datosPersonaje={unaPelicula} />;
+        })}
+      </div>
+    );
+  }
+  
+  
 
 export default PeliculasConteiner;
-
