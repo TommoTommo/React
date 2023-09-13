@@ -1,0 +1,16 @@
+.PeliculasPopulares{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     }
+.article{
+    color: white;
+    width:18%;
+    text-align: center;
+
+}
+ .Fotos{
+    color: white;
+    width:30%;
+    text-align: center;
+ }

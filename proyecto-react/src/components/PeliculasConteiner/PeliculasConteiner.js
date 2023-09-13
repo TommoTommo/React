@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Tarjeta from "../Tarjeta/Tarjeta";
+import TarjetaPelicula from "../Tarjeta/TarjetaPelicula";
+import TarjetaSerie from "../Tarjeta/TarjetaSerie";
 
 class PeliculasConteiner extends Component {
   constructor(props) {
@@ -8,18 +9,29 @@ class PeliculasConteiner extends Component {
   }
 
   render() {
-    const { peliculas } = this.props; // Acceder al array de películas desde props
-    console.log(peliculas);
     return (
       <section>
-        {peliculas.map((peliculas, indice) => {
-         if (indice < 6) {
-          return <Tarjeta key={peliculas.id} datosPelicula={peliculas} />;
+      {this.props.infoPeliculas ?
+      this.props.infoPeliculas.map((peliculas, indice) => {
+        if (indice < 5) {
+          return <TarjetaPelicula key={peliculas.id} datosPelicula={peliculas} />;
          }
-        })}
-        
-      </section>
-    );
+    }
+    )
+    : false }
+
+    /* series */
+    {this.props.infoSeries ?
+      this.props.infoSeries.map((series, indice) => {
+        if (indice < 5) {
+          return <TarjetaSerie key={series.id} datosSerie={series} />;
+         }
+    }
+    )
+    : false }
+
+    </section>    
+    )
   }
 }
 
