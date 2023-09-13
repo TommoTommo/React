@@ -2,7 +2,7 @@
 function Favoritos(){
 
     return(
-        <h1>Favoritos</h1>
+        <h1 className = "titulo">Favoritos</h1>
     )
 }
 

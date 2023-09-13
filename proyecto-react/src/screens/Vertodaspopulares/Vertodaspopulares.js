@@ -2,7 +2,7 @@
 function Vertodaspopulares(){
 
     return(
-        <h1>Populares</h1>
+        <h1 className = "titulo">Populares</h1>
     )
 }
 
