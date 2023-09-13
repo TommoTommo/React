@@ -1,22 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import Tarjeta from "../Tarjeta/Tarjeta";
 
-function PeliculasConteiner(props) {
-    // Asegúrate de que props.contenido es un arreglo antes de mapearlo
-    if (!Array.isArray(props.contenido)) {
-      return null; // o puedes manejar el error de otra manera
-    }
-    console.log(props.contenido);
-  
+class PeliculasConteiner extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    const { peliculas } = this.props; // Acceder al array de películas desde props
+    console.log(peliculas);
     return (
-      <div>
-        {props.contenido.map(function (unaPelicula) {
-          return <Tarjeta key={unaPelicula.id} datosPersonaje={unaPelicula} />;
+      <section>
+        {peliculas.map((peliculas, indice) => {
+         if (indice < 6) {
+          return <Tarjeta key={peliculas.id} datosPelicula={peliculas} />;
+         }
         })}
-      </div>
+        
+      </section>
     );
   }
-  
-  
+}
 
 export default PeliculasConteiner;
