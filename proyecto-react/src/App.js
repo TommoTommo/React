@@ -6,6 +6,8 @@ import Vertodaspelis from "./screens/Vertodaspelis/Vertodaspelis";
 import Vertodaspopulares from "./screens/Vertodaspopulares/Vertodaspopulares";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import DetallePelicula from "./screens/Detalle/DetallePelicula"
+import DetalleSerie from "./screens/Detalle/DetalleSerie"
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="/Vertodaspelis" component= { Vertodaspelis } />
         <Route path="/Vertodaspelis" component= { Vertodaspelis } />
         <Route path="/Vertodaspopulares" component= { Vertodaspopulares } />
+        <Route path="/Detallepelicula/id/:id" component={ DetallePelicula }/>
+        <Route path="/Detalleserie/id/:id" component={ DetalleSerie }/>
 
       </Switch>
       <Footer/>

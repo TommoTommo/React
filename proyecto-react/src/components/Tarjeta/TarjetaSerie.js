@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "./Tarjeta.css"
+import { Link } from "react-router-dom";
 const imagen = "https://image.tmdb.org/t/p/w342";
 
 
@@ -61,7 +62,9 @@ class TarjetaSerie extends Component {
         return (
             <section className="PeliculasPopulares">
                 <article className='article'>
+                <Link to= {`/Detalleserie/id/${this.props.datosSerie.id}`}>
                 <img className="Fotos" src={imagen + this.props.datosSerie.poster_path} alt={this.props.datosSerie.title} />
+                </Link>
                 <h2>{this.props.datosSerie.name}</h2>
                 <button onClick={()=>this.FavoritosPonerSacar(this.props.datosSerie.id)} type='button'>{this.state.textoboton}</button>
                 

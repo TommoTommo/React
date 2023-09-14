@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css"
 import PeliculasConteiner from "../../components/PeliculasConteiner/PeliculasConteiner";
-import { link } from "react-router-dom"
+
 
 class Home extends Component {
 
@@ -40,7 +40,6 @@ class Home extends Component {
 
         return (
             <main>
-                     
             <div>
               <h2 className="titulos">Peliculas Populares</h2>
                 {this.state.peliculas.length > 0 ? <PeliculasConteiner infoPeliculas={this.state.peliculas}/> : <h3>Cargando...</h3> }
