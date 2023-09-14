@@ -27,7 +27,7 @@ class TarjetaSerie extends Component {
     FavoritosPonerSacar(id){
 
             let Favoritos = []
-            let recuperoStorage = localStorage.getItem('StorageFavs');
+            let recuperoStorage = localStorage.getItem('StorageFavsSeries');
             
             if(recuperoStorage !== null){
                Favoritos = JSON.parse(recuperoStorage);   
@@ -53,7 +53,7 @@ class TarjetaSerie extends Component {
             }
     
             let Stringify = JSON.stringify(Favoritos)
-            localStorage.setItem('StorageFavs', Stringify)
+            localStorage.setItem('StorageFavsSeries', Stringify)
     
             console.log(localStorage)
         }

@@ -36,12 +36,11 @@ class Home extends Component {
             .catch(e => console.log(e))
     }
 
-
     render() {
 
         return (
             <main>
-                
+                     
             <div>
               <h2 className="titulos">Peliculas Populares</h2>
                 {this.state.peliculas.length > 0 ? <PeliculasConteiner infoPeliculas={this.state.peliculas}/> : <h3>Cargando...</h3> }

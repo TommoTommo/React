@@ -8,7 +8,7 @@ class TarjetaPeliculas extends Component {
         super(props);
         this.state = {textoboton: "Agregar" }
 
-    };
+    }
     componentDidMount (){
 
         let recuperoStorage = localStorage.getItem('favoritos');
@@ -28,7 +28,7 @@ class TarjetaPeliculas extends Component {
     FavoritosPonerSacar(id){
 
             let Favoritos = []
-            let recuperoStorage = localStorage.getItem('StorageFavs');
+            let recuperoStorage = localStorage.getItem('StorageFavsPelis');
             
             if(recuperoStorage !== null){
                Favoritos = JSON.parse(recuperoStorage);   
@@ -54,7 +54,7 @@ class TarjetaPeliculas extends Component {
             }
     
             let Stringify = JSON.stringify(Favoritos)
-            localStorage.setItem('StorageFavs', Stringify)
+            localStorage.setItem('StorageFavsPelis', Stringify)
     
             console.log(localStorage)
         }
