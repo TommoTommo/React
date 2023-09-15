@@ -1,8 +1,9 @@
-import ".//vertodas.css"
+import "./Vertodas.css"
+
 function Vertodaspelis(){
 
     return(
-        <h1 className='titulo'>Todo</h1>
+        <h1 className='tituloTodas'>Todo</h1>
     )
 }
 

@@ -46,7 +46,7 @@ class Home extends Component {
         return (
             <main>
             <div className = "hola">
-              <h2 className="titulos">Peliculas Populares</h2>
+              <h2 className="tituloHome">Peliculas Populares</h2>
                 {this.state.peliculas.length > 0 ? <PeliculasConteiner infoPeliculas={this.state.peliculas}/> : <h3>Cargando...</h3> }
             </div>
             
@@ -54,7 +54,7 @@ class Home extends Component {
   
             <div className = "hola">
               
-                <h2 className="titulos">Series mas vistas</h2> 
+                <h2 className="tituloHome">Series mas vistas</h2> 
                
               {this.state.series.length > 0 ? <PeliculasConteiner infoSeries={this.state.series}/> : <h3>Cargando...</h3> }
   
