@@ -42,13 +42,13 @@ class DetallePelicula extends Component {
                                 <ul>
                                     <li> <h3>Calificación/ raiting:</h3> {this.state.pelicula.vote_average}</li>
                                     <br></br>
-                                    <li> <h3>Generos:</h3> {this.state.pelicula.genres.map((genres, idx) => <ul>{genres.name}</ul>)} </li>
+                                    <li> <h3>Generos:</h3> {this.state.pelicula.genres.map((genres, idx) => <li className="lista">{genres.name}</li>)} </li>
                                     <br></br>
                                     <li><h3>Fecha de estreno:</h3> {this.state.pelicula.release_date}</li>
                                     <br></br>
                                     <li><h3>Duracion:</h3>{this.state.pelicula.runtime} minutos</li>
                                     <br></br>
-                                    <p><h3>Sinópsis:</h3>   {this.state.pelicula.overview}</p>
+                                    <li><h3>Sinópsis:</h3>   {this.state.pelicula.overview}</li>
                                 </ul>
                             </article>
                         </section>

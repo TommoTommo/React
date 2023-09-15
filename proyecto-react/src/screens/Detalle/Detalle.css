@@ -14,3 +14,7 @@ li{
 p{
     color:aliceblue
 }
+
+.lista{
+    list-style: none;
+}
