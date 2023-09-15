@@ -1,0 +1,13 @@
+.cuadro_buscar{
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: black;
+    padding: 3px;
+    color: white ;
+}
+
+.buscarbotton{
+    border-radius: 10px;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
