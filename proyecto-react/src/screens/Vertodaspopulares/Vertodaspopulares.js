@@ -3,7 +3,7 @@ import "./Verpopulares.css"
 function Vertodaspopulares(){
 
     return(
-        <h1 className = "tituloPopulares">Populares</h1>
+        <h1 className = "tituloPopulares">Peliculas populares</h1>
     )
 }
 

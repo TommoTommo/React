@@ -21,7 +21,6 @@ class PeliculasConteiner extends Component {
     )
     : false }
 
-    /* series */
     {this.props.infoSeries ?
       this.props.infoSeries.map((series, indice) => {
         if (indice < 5) {

@@ -76,7 +76,7 @@ class Favoritos extends Component {
                 return (
                     <section >
                         <article >
-                            
+                        <h1 className = "tituloPopulares">Favoritos</h1>
                         { <PeliculasConteiner infoPeliculas={this.state.ArrayPelisFav}/> }
                         { <PeliculasConteiner infoSeries={this.state.ArraySeriesFav}/>  }
                         </article>
