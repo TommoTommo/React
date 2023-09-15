@@ -32,7 +32,7 @@ class DetallePelicula extends Component {
             <main>
                 {this.state.pelicula ?
                     (<React.Fragment>
-                        <h2>Titulo: {this.state.pelicula.title}</h2>
+                        <h2 className="TituloDetalle">{this.state.pelicula.title}</h2>
                         <section>
                             <article>
                                 <img src={imagen + this.state.pelicula.poster_path} alt={this.state.pelicula.title} />

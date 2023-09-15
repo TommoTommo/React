@@ -2,8 +2,8 @@ import React from "react";
 
 import Home from "./screens/Home/Home";
 import Favoritos from "./screens/Favoritos/Favoritos";
-import Vertodaspelis from "./screens/VerTodo/Vertodaspelis";
-import Vertodaspopulares from "./screens/VerTodo/Vertodaspopulares";
+import Vertodasseries from "./screens/Vertodasseries/Vertodasseries";
+import Peliculaspopulares from "./screens/Peliculaspopulares/Peliculaspopulares";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import DetallePelicula from "./screens/Detalle/DetallePelicula"
@@ -20,9 +20,9 @@ function App() {
       <Switch>
       
         <Route path="/" exact={ true } component= { Home } />
-        <Route path="/favoritos" component= { Favoritos } />
-        <Route path="/Vertodaspelis" component= { Vertodaspelis } />
-        <Route path="/Vertodaspopulares" component= { Vertodaspopulares } />
+        <Route path="/Favoritos" component= { Favoritos } />
+        <Route path="/Vertodasseries" component= { Vertodasseries } />
+        <Route path="/Peliculaspopulares" component= { Peliculaspopulares } />
         <Route path="/Detallepelicula/id/:id" component={ DetallePelicula }/>
         <Route path="/Detalleserie/id/:id" component={ DetalleSerie }/>
         <Route path="/Resultadobusqueda/:querry" component={ResultadoBusqueda}/>

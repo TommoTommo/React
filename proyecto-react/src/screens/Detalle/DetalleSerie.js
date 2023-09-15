@@ -31,7 +31,7 @@ class DetalleSerie extends Component {
             <main>
                 {this.state.series ?
                     (<React.Fragment>
-                        <h2>Titulo: {this.state.series.title}</h2>
+                        <h2 className="TituloDetalle">{this.state.series.title}</h2>
                         <section>
                             <article>
                                 <img src={imagen + this.state.series.poster_path} alt={this.state.series.title} />

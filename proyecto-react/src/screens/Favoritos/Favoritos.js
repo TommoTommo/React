@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Favoritos.css"
 import PeliculasConteiner from "../../components/PeliculasConteiner/PeliculasConteiner"
 
 
@@ -76,7 +77,7 @@ class Favoritos extends Component {
                 return (
                     <section >
                         <article >
-                            
+                        <h1 className = "tituloFavoritos">Favoritos</h1>
                         { <PeliculasConteiner infoPeliculas={this.state.ArrayPelisFav}/> }
                         { <PeliculasConteiner infoSeries={this.state.ArraySeriesFav}/>  }
                         </article>
