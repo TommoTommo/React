@@ -14,7 +14,7 @@ class Favoritos extends Component {
         
         //Traigo el storage de Pelis Y Series, Los guardo en arrays
         
-    let  PelisFav=[];
+        let  PelisFav=[];
     let  SeriesFav=[]
         
        let recuperoStoragePelis = localStorage.getItem('StorageFavsPelis');
@@ -32,14 +32,21 @@ class Favoritos extends Component {
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=f2acabc2f1f7dfa29f6493c2fcca003f`) //peliculas populares
             .then((response) => response.json())
             .then((data) => {
-                let ArrayPelisFav = data.results.filter((cosas)=>{
-                    return PelisFav.includes(cosas.id)
+               
+                data.results.filter((infopeli)=>{
+                    if (PelisFav.includes(infopeli.id)) {
+                  
+                        console.log(infopeli)
+                        this.state.ArrayPelisFav.push(infopeli)
+                 
+                    }
+                    
                 })
 
 
                 this.setState({
 
-                    ArrayPelisFav:ArrayPelisFav
+                    ArrayPelisFav:this.state.ArrayPelisFav
                 })
             })
             .catch(e => console.log(e))
@@ -48,23 +55,26 @@ class Favoritos extends Component {
         fetch(`https://api.themoviedb.org/3/tv/popular?api_key=f2acabc2f1f7dfa29f6493c2fcca003f`) //series mas vistas
             .then((response) => response.json())
             .then((data) => {
-                let ArraySeriesFav = data.results.filter((cosas)=>{
-                    return SeriesFav.includes(cosas.id)
+                data.results.filter((infoserie)=>{
+                    if (PelisFav.includes(infoserie.id)) {
+                        this.state.ArraySeriesFav.push(infoserie)
+                    }
+                    
                 })
                 this.setState({
 
 
-                    ArraySeriesFav: ArraySeriesFav
+                    ArraySeriesFav: this.state.ArraySeriesFav
                 })
             })
             .catch(e => console.log(e))}
 
-
+//le tiene que llegar un array de objetos de peliculas/series
             render(){
                 return (
                     <section >
                         <article >
-                            <p>{this.state.ArrayPelisFav}</p>
+                            
                         { <PeliculasConteiner infoPeliculas={this.state.ArrayPelisFav}/> }
                         { <PeliculasConteiner infoSeries={this.state.ArraySeriesFav}/>  }
                         </article>
