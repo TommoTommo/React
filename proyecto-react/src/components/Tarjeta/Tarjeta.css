@@ -1,12 +1,11 @@
 .PeliculasPopulares{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
 }
 
 .article{
-    display: flex;
     flex-direction: column;
     color: white;
 }
@@ -15,5 +14,4 @@
     color: white;
     width:40vh;
     text-align: center;
-    
 }

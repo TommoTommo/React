@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import "./PeliculasConteiner.css"
 import TarjetaPelicula from "../Tarjeta/TarjetaPelicula";
-import TarjetaSerie from "../Tarjeta/TarjetaSerie";
+import TarjetaSerie from "../Tarjeta/TarjetaSerie"; 
 
 class PeliculasConteiner extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class PeliculasConteiner extends Component {
 
   render() {
     return (
-      <section>
+      <section className = "containerPeliculas">
       {this.props.infoPeliculas ?
       this.props.infoPeliculas.map((peliculas, indice) => {
         if (indice < 5) {

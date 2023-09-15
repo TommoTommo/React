@@ -1,0 +1,4 @@
+.containerPeliculas{
+    display: flex;
+    justify-content: space-around;
+}
