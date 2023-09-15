@@ -19,6 +19,8 @@ class Home extends Component {
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=f2acabc2f1f7dfa29f6493c2fcca003f`) //peliculas populares
             .then((response) => response.json())
             .then((data) => {
+                console.log("holaaaaaaa");
+                console.log(data.results);
                 this.setState({
                     peliculas: data.results
                 })
@@ -29,7 +31,10 @@ class Home extends Component {
         fetch(`https://api.themoviedb.org/3/tv/popular?api_key=f2acabc2f1f7dfa29f6493c2fcca003f`) //series mas vistas
             .then((response) => response.json())
             .then((data) => {
+                console.log("holaaaaaaa222");
+                console.log(data.results);
                 this.setState({
+               
                     series: data.results
                 })
             })
