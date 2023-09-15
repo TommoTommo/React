@@ -32,7 +32,7 @@ class DetallePelicula extends Component {
             <main>
                 {this.state.pelicula ?
                     (<React.Fragment>
-                        <h2>Titulo: {this.state.pelicula.title}</h2>
+                        <h2 className="TituloDetalle">{this.state.pelicula.title}</h2>
                         <section>
                             <article>
                                 <img src={imagen + this.state.pelicula.poster_path} alt={this.state.pelicula.title} />
@@ -46,7 +46,7 @@ class DetallePelicula extends Component {
                                     <br></br>
                                     <li><h3>Fecha de estreno:</h3> {this.state.pelicula.release_date}</li>
                                     <br></br>
-                                    <p><h3>Sinópsis:</h3>   {this.state.pelicula.overview}</p>
+                                    <li><p><h3>Sinópsis:</h3>   {this.state.pelicula.overview}</p></li>
                                 </ul>
                             </article>
                         </section>

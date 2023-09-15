@@ -31,7 +31,7 @@ class DetalleSerie extends Component {
             <main>
                 {this.state.series ?
                     (<React.Fragment>
-                        <h2>Titulo: {this.state.series.title}</h2>
+                        <h2 className="TituloDetalle">{this.state.series.title}</h2>
                         <section>
                             <article>
                                 <img src={imagen + this.state.series.poster_path} alt={this.state.series.title} />
@@ -45,7 +45,7 @@ class DetalleSerie extends Component {
                                     <br></br>
                                     <li><h3>Fecha de estreno:</h3> {this.state.series.release_date}</li>
                                     <br></br>
-                                    <p><h3>Sinópsis:</h3>   {this.state.series.overview}</p>
+                                    <li><p><h3>Sinópsis:</h3>   {this.state.series.overview}</p></li>
                                 </ul>
                             </article>
                         </section>

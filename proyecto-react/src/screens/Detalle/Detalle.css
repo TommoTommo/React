@@ -1,9 +1,16 @@
+.TituloDetalle{
+    color: aliceblue;
+    font-size: 6vh;
+}
+
 h3{
     color:aliceblue
 }
+
 li{
     color:aliceblue
 }
+
 p{
     color:aliceblue
 }

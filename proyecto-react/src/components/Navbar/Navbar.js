@@ -8,7 +8,7 @@ function Menu() {
             <Link className="titulo-href" to="/">HOME</Link>
             <Link className="titulo-href" to="/Favoritos">FAVORITOS</Link>
             <Link className="titulo-href" to="/Vertodasseries"> SERIES </Link>
-            <Link className="titulo-href" to="/Vertodaspopulares"> PELICULAS</Link>
+            <Link className="titulo-href" to="/Peliculaspopulares"> PELICULAS</Link>
 
             <Buscador></Buscador>
         </ul >

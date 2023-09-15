@@ -3,7 +3,7 @@ import React from "react";
 import Home from "./screens/Home/Home";
 import Favoritos from "./screens/Favoritos/Favoritos";
 import Vertodasseries from "./screens/Vertodasseries/Vertodasseries";
-import Vertodaspopulares from "./screens/Vertodaspopulares/Vertodaspopulares";
+import Peliculaspopulares from "./screens/Peliculaspopulares/Peliculaspopulares";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import DetallePelicula from "./screens/Detalle/DetallePelicula"
@@ -22,7 +22,7 @@ function App() {
         <Route path="/" exact={ true } component= { Home } />
         <Route path="/Favoritos" component= { Favoritos } />
         <Route path="/Vertodasseries" component= { Vertodasseries } />
-        <Route path="/Vertodaspopulares" component= { Vertodaspopulares } />
+        <Route path="/Peliculaspopulares" component= { Peliculaspopulares } />
         <Route path="/Detallepelicula/id/:id" component={ DetallePelicula }/>
         <Route path="/Detalleserie/id/:id" component={ DetalleSerie }/>
         <Route path="/Resultadobusqueda/:querry" component={ResultadoBusqueda}/>
