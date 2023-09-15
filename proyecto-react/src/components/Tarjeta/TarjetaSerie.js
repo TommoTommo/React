@@ -56,7 +56,8 @@ class TarjetaSerie extends Component {
             let Stringify = JSON.stringify(Favoritos)
             localStorage.setItem('StorageFavsSeries', Stringify)
     
-            console.log(localStorage)
+            console.log("Seriesstorage");
+            console.log(localStorage.StorageFavsSeries);
         }
     render(){
         return (

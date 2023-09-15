@@ -38,11 +38,11 @@ class TarjetaPeliculas extends Component {
                
             if(Favoritos.includes(id)){
                
-           
-                Favoritos = Favoritos.filter( function(id){
-                    return id in Favoritos
+                Favoritos = Favoritos.filter( unId => unId !== id)
+                //saca el id de la pelic clickeada de array favoritos
+               
 //los id que esten en favoritos quedan porque estan "in"
-                });
+              
                 this.setState({
                     textoboton: "Agregar"
                 })
@@ -57,8 +57,9 @@ class TarjetaPeliculas extends Component {
     
             let Stringify = JSON.stringify(Favoritos)
             localStorage.setItem('StorageFavsPelis', Stringify)
-    
-            console.log(localStorage)
+            console.log("StorageFavsPelis");
+            console.log(localStorage.StorageFavsPelis);
+
         }
         
     

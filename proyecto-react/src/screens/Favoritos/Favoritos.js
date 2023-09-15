@@ -11,7 +11,9 @@ class Favoritos extends Component {
 
     }
     componentDidMount (){       
-        
+         
+
+
         //Traigo el storage de Pelis Y Series, Los guardo en arrays
         
         let  PelisFav=[];
@@ -56,7 +58,7 @@ class Favoritos extends Component {
             .then((response) => response.json())
             .then((data) => {
                 data.results.filter((infoserie)=>{
-                    if (PelisFav.includes(infoserie.id)) {
+                    if (SeriesFav.includes(infoserie.id)) {
                         this.state.ArraySeriesFav.push(infoserie)
                     }
                     
