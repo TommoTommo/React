@@ -68,13 +68,13 @@ class TarjetaPeliculas extends Component {
         return (
             <section className="PeliculasPopulares">
                 <article className='article'>
-                
+                 <ul>
                         <Link to = {`/Detallepelicula/id/${this.props.datosPelicula.id}`}>
                         <img className="Fotos" src={imagen + this.props.datosPelicula.poster_path} alt={this.props.datosPelicula.title} />
                         </Link>
                         <h2>{this.props.datosPelicula.title}</h2>
                         <button onClick={()=>this.FavoritosPonerSacar(this.props.datosPelicula.id)} type='button'>{this.state.textoboton}</button>
-                    
+                        </ul>
                 </article>
             </section>
         )
