@@ -1,16 +1,19 @@
 .PeliculasPopulares{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-     }
-.article{
-    color: white;
-    width:18%;
-    text-align: center;
-
 }
- .Fotos{
+
+.article{
+    display: flex;
+    flex-direction: column;
     color: white;
-    width:30%;
+}
+
+.Fotos{
+    color: white;
+    width:40vh;
     text-align: center;
- }
+    
+}
