@@ -107,9 +107,9 @@ class TarjetaSerie extends Component {
                     <img className="Fotos" src={imagen + this.props.datosSerie.poster_path} alt={this.props.datosSerie.title} />
                     </Link>
                     <h2>{this.props.datosSerie.name}</h2>
-                    <button onClick={()=>this.FavoritosPonerSacar()} type='button'>{this.state.textoBoton}</button>
+                    <button onClick={()=>this.FavoritosPonerSacar()} type='button' className='botonPelisSeries'>{this.state.textoBoton}</button>
                     {this.state.description ? <div><p>{this.props.datosSerie.overview}</p></div>: false}
-                    <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
+                    <button onClick={() =>this.Descrip()} type="button" className='botonPelisSeries'>{this.state.textoDescripcion}</button>
                   </ul>
                 </article>
             </section>
