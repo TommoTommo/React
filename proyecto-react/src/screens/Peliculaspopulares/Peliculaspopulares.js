@@ -43,7 +43,7 @@ MostrasrMasPeliculas() {
         {this.state.peliculas.length > 0 ?  
             <main>
               <div>
-                <h2>Todas las peliculas populares:</h2>
+                <h2 className="white">Peliculas populares</h2>
                 <button onClick={() => this.MostrasrMasPeliculas()} > <h2>Mas Titulos</h2></button>
               </div>
             <PeliculasConteiner datosPelicula={this.state.peliculas} /> 
