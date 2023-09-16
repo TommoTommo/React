@@ -40,7 +40,7 @@ class PeliculasConteiner extends Component {
 
         {this.props.datosPelicula ?
           this.props.datosPelicula.map((peliculas) =>
-            <TarjetaSerie key={peliculas.id} datosPelicula={peliculas} />
+            <TarjetaPelicula key={peliculas.id} datosPelicula={peliculas} />
           )
 
           : false}

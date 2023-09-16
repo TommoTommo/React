@@ -12,7 +12,7 @@ class VerTodasPeliculas extends Component {
     }
 
 componentDidMount() {
-    fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`)
     .then((response) => response.json())
     .then((data) =>{
         this.setState({
@@ -24,7 +24,7 @@ componentDidMount() {
 
 MostrasrMasPeliculas() {
     let numero = this.state.otras;
-    fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=${numero}`)
+    fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=${numero}`)
       .then((response) => response.json())
       .then((data) =>
         this.setState({
