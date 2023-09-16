@@ -102,7 +102,7 @@ class TarjetaSerie extends Component {
         return (
             <section className="SeriesPopulares">
                 <article className='article'>
-
+                  <ul>
                     <Link to= {`/Detalleserie/id/${this.props.datosSerie.id}`}>
                     <img className="Fotos" src={imagen + this.props.datosSerie.poster_path} alt={this.props.datosSerie.title} />
                     </Link>
@@ -110,7 +110,7 @@ class TarjetaSerie extends Component {
                     <button onClick={()=>this.FavoritosPonerSacar()} type='button'>{this.state.textoBoton}</button>
                     {this.state.description ? <div><p>{this.props.datosSerie.overview}</p></div>: false}
                     <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
-
+                  </ul>
                 </article>
             </section>
         )
