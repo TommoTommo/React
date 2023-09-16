@@ -85,11 +85,7 @@ class TarjetaSerie extends Component {
                     </Link>
                     <h2>{this.props.datosSerie.name}</h2>
                     <button onClick={()=>this.FavoritosPonerSacar(this.props.datosSerie.id)} type='button'>{this.state.textoBoton}</button>
-                    {this.state.description ?
-                        <div>
-                            <p>{this.props.datosSerie.overview}</p>
-                        </div>
-                    : false}
+                    {this.state.description ? <div><p>{this.props.datosSerie.overview}</p></div>: false}
                     <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
                 </article>
             </section>
