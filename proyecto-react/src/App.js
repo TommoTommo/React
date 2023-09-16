@@ -1,6 +1,6 @@
 import React from "react";
 
-import Home from "./screens/Home/Home";
+import  Home from "./screens/Home/Home";
 import Favoritos from "./screens/Favoritos/Favoritos";
 import VerTodasSeries from "./screens/Vertodasseries/VerTodasSeries";
 import VerTodasPeliculas from "./screens/Peliculaspopulares/Peliculaspopulares";
