@@ -8,7 +8,6 @@ class TarjetaSerie extends Component {
     constructor(props) {
         super(props);
 
-   
 
         this.state = {textoDescripcion:"Mostrar descripción" , textoBoton: " Agregar a favoritos"}
     }
@@ -99,7 +98,6 @@ class TarjetaSerie extends Component {
 
 
         }
-
     render(){
         return (
             <section className="SeriesPopulares">
