@@ -2,7 +2,7 @@ import React from "react";
 
 import  Home from "./screens/Home/Home";
 import Favoritos from "./screens/Favoritos/Favoritos";
-import VerTodasSeries from "./screens/Vertodasseries/VerTodasSeries";
+import VerTodasSeries from "./screens/Vertodasseries/Vertodasseries";
 import VerTodasPeliculas from "./screens/Peliculaspopulares/Peliculaspopulares";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
