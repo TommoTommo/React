@@ -60,8 +60,8 @@ class TarjetaPeliculas extends Component {
                 this.setState({
                     textoBoton: "Agregar"
                 })
-    
-            } else {
+            } 
+            else {
                Favoritos.push(id);
                 this.setState({
                     textoBoton: "Sacar"
@@ -79,12 +79,13 @@ class TarjetaPeliculas extends Component {
         return (
             <section className="PeliculasPopulares">
                 <article className='article'>
-                        <Link to = {`/Detallepelicula/id/${this.props.datosPelicula.id}`}>
-                        <img className="Fotos" src={imagen + this.props.datosPelicula.poster_path} alt={this.props.datosPelicula.title} />
-                        </Link>
-                        <h2>{this.props.datosPelicula.title}</h2>
-                        <button onClick={()=>this.FavoritosPonerSacar(this.props.datosPelicula.id)} type='button'>{this.state.textoBoton}</button>
-                        <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
+                    <Link to = {`/Detallepelicula/id/${this.props.datosPelicula.id}`}>
+                    <img className="Fotos" src={imagen + this.props.datosPelicula.poster_path} alt={this.props.datosPelicula.title} />
+                    </Link>
+                    <h2>{this.props.datosPelicula.title}</h2>
+                    <button onClick={()=>this.FavoritosPonerSacar(this.props.datosPelicula.id)} type='button'>{this.state.textoBoton}</button>
+                    {this.state.description ? <div><p>{this.props.datosPelicula.overview}</p></div>: false}
+                    <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
                 </article>
             </section>
         )
