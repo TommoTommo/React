@@ -7,7 +7,22 @@ const imagen = "https://image.tmdb.org/t/p/w342";
 class TarjetaSerie extends Component {
     constructor(props) {
         super(props);
-        this.state = {textoboton: "Agregar" };
+        this.state = {textoDescripcion:"Mostrar descripción" , textoBoton: "Agregar"}
+    }
+
+    Descrip(){
+        if(this.state.description === false){
+            this.setState({
+                description:true,
+                textoDescripcion:"Ocultar descripción "
+            })
+        } 
+        else{
+            this.setState({
+                description:false,
+                textoDescripcion:"Mostrar descripción"
+            })
+        }
     }
 
     componentDidMount (){
@@ -44,13 +59,13 @@ class TarjetaSerie extends Component {
 
                 });
                 this.setState({
-                    textoboton: "Agregar"
+                    textoBoton: "Agregar"
                 })
     
             } else {
                Favoritos.push(id);
                 this.setState({
-                    textoboton: "Sacar"
+                    textoBoton: "Sacar"
                 })
             }
     
@@ -65,15 +80,17 @@ class TarjetaSerie extends Component {
         return (
             <section className="PeliculasPopulares">
                 <article className='article'>
-
-                    
                     <Link to= {`/Detalleserie/id/${this.props.datosSerie.id}`}>
                     <img className="Fotos" src={imagen + this.props.datosSerie.poster_path} alt={this.props.datosSerie.title} />
                     </Link>
                     <h2>{this.props.datosSerie.name}</h2>
-                    <button onClick={()=>this.FavoritosPonerSacar(this.props.datosSerie.id)} type='button'>{this.state.textoboton}</button>
-                    
-
+                    <button onClick={()=>this.FavoritosPonerSacar(this.props.datosSerie.id)} type='button'>{this.state.textoBoton}</button>
+                    {this.state.description ?
+                        <div>
+                            <p>{this.props.datosSerie.overview}</p>
+                        </div>
+                    : false}
+                    <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
                 </article>
             </section>
         )
