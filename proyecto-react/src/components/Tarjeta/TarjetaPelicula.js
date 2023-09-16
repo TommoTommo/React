@@ -35,11 +35,11 @@ class TarjetaPeliculas extends Component {
 
         if (recuperoStorage === null) {
             this.setState({
-                textoboton: "Agregar a favoritos",
+                textoBoton: "Agregar a favoritos",
             });
           } else if (recuperoStorage.includes(this.props.datosPelicula.id)) {
             this.setState({
-                textoboton: "Quitar de favoritos",
+                textoBoton: "Quitar de favoritos",
             });
           }
 
@@ -57,7 +57,7 @@ class TarjetaPeliculas extends Component {
           Pelistraidas = [];
           LocasStorage = JSON.stringify(arrayPersonajes);
           this.setState({
-            textoboton: "Quitar de favoritos",
+            textoBoton: "Quitar de favoritos",
           });
         }
 
@@ -69,7 +69,7 @@ class TarjetaPeliculas extends Component {
           PelisFinales = TraigoStorage.concat(arrayPersonajes);
           LocasStorage = JSON.stringify(PelisFinales);
           this.setState({
-            textoboton: "Quitar de favoritos",
+            textoBoton: "Quitar de favoritos",
           });
         }
     
@@ -80,7 +80,7 @@ class TarjetaPeliculas extends Component {
           );
           LocasStorage = JSON.stringify(PelisFinales);
           this.setState({
-            textoboton: "Agregar a favoritos",
+            textoBoton: "Agregar a favoritos",
           });
         }
     

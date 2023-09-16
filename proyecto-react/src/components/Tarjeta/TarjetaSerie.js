@@ -38,11 +38,11 @@ class TarjetaSerie extends Component {
 
         if (recuperoStorage === null) {
             this.setState({
-                textoboton: "Agregar a favoritos",
+                textoBoton: "Agregar a favoritos",
             });
           } else if (recuperoStorage.includes(this.props.datosSerie.id)) {
             this.setState({
-                textoboton: "Quitar de favoritos",
+                textoBoton: "Quitar de favoritos",
             });
           }
 
@@ -74,7 +74,7 @@ class TarjetaSerie extends Component {
               StorageSeries = TraigoStorage.concat(ArraySeries);
               LocasStorage = JSON.stringify(StorageSeries);
               this.setState({
-                textoboton: "Quitar de favoritos",
+                textoBoton: "Quitar de favoritos",
               });
             }
         
@@ -85,7 +85,7 @@ class TarjetaSerie extends Component {
               );
               LocasStorage = JSON.stringify(StorageSeries);
               this.setState({
-                textoboton: "Agregar a favoritos",
+                textoBoton: "Agregar a favoritos",
               });
             }
         
