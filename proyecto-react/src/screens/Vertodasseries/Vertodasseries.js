@@ -43,7 +43,7 @@ MostrasrMasSeries() {
         {this.state.series.length > 0 ?  
             <main>
               <div>
-                <h2>Series</h2>
+                <h2 className="white">Series</h2>
                 <button onClick={() => this.MostrasrMasSeries()} > <h2>Mas Titulos</h2></button>
               </div>
             <PeliculasConteiner datosSerie={this.state.series} /> 
