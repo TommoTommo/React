@@ -7,57 +7,66 @@ const imagen = "https://image.tmdb.org/t/p/w342";
 class TarjetaPeliculas extends Component {
     constructor(props) {
         super(props);
-        this.state = {textoboton: "Agregar" }
+        this.state = {textoboton: "Agregar a favoritos" }
     }
     
     componentDidMount (){
 
-        let recuperoStorage = localStorage.getItem('favoritos');
+        let recuperoStorage = localStorage.getItem('pelicula');
 
-        if (recuperoStorage !== null){
-            let favoritos = JSON.parse(recuperoStorage);
-    
-            //si está el id, cambiar el texto del botón
-            if(favoritos.includes(this.props.datosPelicula.id)){
-                this.setState({
-                    textoBoton: "Quitar"
-                })
-            }
 
-        }
+
+        if (recuperoStorage === null) {
+            this.setState({
+                textoboton: "Agregar a favoritos",
+            });
+          } else if (recuperoStorage.includes(this.props.datosPelicula.id)) {
+            this.setState({
+                textoboton: "Quitar de favoritos",
+            });
+          }
+
+
+
+
     }
-    FavoritosPonerSacar(id){
-
-            let Favoritos = []
-            let recuperoStorage = localStorage.getItem('StorageFavsPelis');
-            
-            if(recuperoStorage !== null){
-               Favoritos = JSON.parse(recuperoStorage);   
-            }
-               
-            if(Favoritos.includes(id)){
-               
-                Favoritos = Favoritos.filter( unId => unId !== id)
-                //saca el id de la pelic clickeada de array favoritos
-               
-//los id que esten en favoritos quedan porque estan "in"
-              
-                this.setState({
-                    textoboton: "Agregar"
-                })
+    FavoritosPonerSacar(){
+        let arrayPersonajes = [this.props.datosPelicula.id];
+        let Pelistraidas = localStorage.getItem("pelicula");
+        let LocasStorage = "";
     
-            } else {
-               Favoritos.push(id);
-                this.setState({
-                    textoboton: "Sacar"
-                })
-            }
+        if (Pelistraidas === null) {
+          Pelistraidas = [];
+          LocasStorage = JSON.stringify(arrayPersonajes);
+          this.setState({
+            textoboton: "Quitar de favoritos",
+          });
+        }
     
-            let Stringify = JSON.stringify(Favoritos)
-            localStorage.setItem('StorageFavsPelis', Stringify)
-
-            console.log("StorageFavsPelis");
-            console.log(localStorage.StorageFavsPelis);
+        let PelisFinales = "";
+    
+        if (Pelistraidas.length !== 0) {
+          let TraigoStorage = JSON.parse(Pelistraidas);
+          PelisFinales = TraigoStorage.concat(arrayPersonajes);
+          LocasStorage = JSON.stringify(PelisFinales);
+          this.setState({
+            textoboton: "Quitar de favoritos",
+          });
+        }
+    
+        if (Pelistraidas.includes(this.props.datosPelicula.id)) {
+          let TraigoStorage = JSON.parse(Pelistraidas);
+          PelisFinales = TraigoStorage.filter(
+            (item) => item !== this.props.datosPelicula.id
+          );
+          LocasStorage = JSON.stringify(PelisFinales);
+          this.setState({
+            textoboton: "Agregar a favoritos",
+          });
+        }
+    
+        localStorage.setItem("pelicula", LocasStorage);
+ 
         }
         
     render(){
@@ -69,7 +78,7 @@ class TarjetaPeliculas extends Component {
                         <img className="Fotos" src={imagen + this.props.datosPelicula.poster_path} alt={this.props.datosPelicula.title} />
                         </Link>
                         <h2>{this.props.datosPelicula.title}</h2>
-                        <button onClick={()=>this.FavoritosPonerSacar(this.props.datosPelicula.id)} type='button'>{this.state.textoboton}</button>
+                        <button onClick={()=>this.FavoritosPonerSacar()} type='button'>{this.state.textoboton}</button>
                     </ul>
                 </article>
             </section>

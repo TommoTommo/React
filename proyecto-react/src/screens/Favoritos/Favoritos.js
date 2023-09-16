@@ -20,12 +20,12 @@ class Favoritos extends Component {
         let  PelisFav=[];
     let  SeriesFav=[]
         
-       let recuperoStoragePelis = localStorage.getItem('StorageFavsPelis');
+       let recuperoStoragePelis = localStorage.getItem('pelicula');
             
        if(recuperoStoragePelis !== null){
           PelisFav = JSON.parse(recuperoStoragePelis);   
        }
-       let recuperoStorageSeries = localStorage.getItem('StorageFavsSeries');
+       let recuperoStorageSeries = localStorage.getItem('serie');
             
        if(recuperoStorageSeries !== null){
           SeriesFav = JSON.parse(recuperoStorageSeries);   
@@ -38,10 +38,10 @@ class Favoritos extends Component {
                
                 data.results.filter((infopeli)=>{
                     if (PelisFav.includes(infopeli.id)) {
-                  
-                        console.log(infopeli)
+                        console.log("holaaaawqrqwqwdwqfeqfqe")
+                        
                         this.state.ArrayPelisFav.push(infopeli)
-                 
+                        console.log(this.state.ArrayPelisFav)
                     }
                     
                 })
