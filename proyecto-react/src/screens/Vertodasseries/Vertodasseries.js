@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import  Filtro from "../../components/Filtro/Filtro";
 import './Vertodasseries.css';
 import PeliculasConteiner from "../../components/PeliculasConteiner/PeliculasConteiner";
 
@@ -20,7 +21,22 @@ componentDidMount() {
         })
     })
     .catch((error) => console.log(error));
+
+
+    
 }
+
+filtrarSeries(textoAFiltrar){
+  //  Desarrollar el método para que deje solo los personajes en donde el texto a filtrar esté incluido en el nombre.
+      let SeriesFiltrados = this.state.series.filter(function(unaserie){
+          return unaserie.title.includes(textoAFiltrar) //includes retorna TRUE o FALSE
+      })
+
+      this.setState({
+          datosSerie: SeriesFiltrados,
+      })
+
+  }
 
 MostrasrMasSeries() {
     let numero = this.state.otras;
@@ -44,7 +60,9 @@ MostrasrMasSeries() {
             <main>
               <div>
                 <h2 className="white">Series</h2>
+                
                 <button onClick={() => this.MostrasrMasSeries()} > <h2>Mas Titulos</h2></button>
+                <Filtro filtrar={(texto) => this.filtrarSeries(texto)} />
               </div>
             <PeliculasConteiner datosSerie={this.state.series} /> 
             </main>
@@ -58,3 +76,7 @@ MostrasrMasSeries() {
 }
 
 export default VerTodasSeries;
+
+
+
+
