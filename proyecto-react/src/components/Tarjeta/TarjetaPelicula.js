@@ -7,7 +7,22 @@ const imagen = "https://image.tmdb.org/t/p/w342";
 class TarjetaPeliculas extends Component {
     constructor(props) {
         super(props);
-        this.state = {textoboton: "Agregar" }
+        this.state = {textoDescripcion:"Mostrar descripción" , textoBoton: "Agregar"}
+    }
+
+    Descrip(){
+        if(this.state.description === false){
+            this.setState({
+                description:true,
+                textoDescripcion:"Ocultar descripción "
+            })
+        } 
+        else{
+            this.setState({
+                description:false,
+                textoDescripcion:"Mostrar descripción"
+            })
+        }
     }
     
     componentDidMount (){
@@ -43,13 +58,13 @@ class TarjetaPeliculas extends Component {
 //los id que esten en favoritos quedan porque estan "in"
               
                 this.setState({
-                    textoboton: "Agregar"
+                    textoBoton: "Agregar"
                 })
     
             } else {
                Favoritos.push(id);
                 this.setState({
-                    textoboton: "Sacar"
+                    textoBoton: "Sacar"
                 })
             }
     
@@ -68,7 +83,8 @@ class TarjetaPeliculas extends Component {
                         <img className="Fotos" src={imagen + this.props.datosPelicula.poster_path} alt={this.props.datosPelicula.title} />
                         </Link>
                         <h2>{this.props.datosPelicula.title}</h2>
-                        <button onClick={()=>this.FavoritosPonerSacar(this.props.datosPelicula.id)} type='button'>{this.state.textoboton}</button>
+                        <button onClick={()=>this.FavoritosPonerSacar(this.props.datosPelicula.id)} type='button'>{this.state.textoBoton}</button>
+                        <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
                 </article>
             </section>
         )
