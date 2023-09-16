@@ -7,7 +7,7 @@ const imagen = "https://image.tmdb.org/t/p/w342";
 class TarjetaSerie extends Component {
     constructor(props) {
         super(props);
-        this.state = {textoboton: "Agregar" };
+        this.state = {textoboton: "Agregar" }
     }
 
     componentDidMount (){
@@ -60,7 +60,6 @@ class TarjetaSerie extends Component {
             console.log("Seriesstorage");
             console.log(localStorage.StorageFavsSeries);
         }
-
     render(){
         return (
             <section className="PeliculasPopulares">
