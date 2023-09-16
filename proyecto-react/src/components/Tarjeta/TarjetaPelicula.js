@@ -7,7 +7,24 @@ const imagen = "https://image.tmdb.org/t/p/w342";
 class TarjetaPeliculas extends Component {
     constructor(props) {
         super(props);
-        this.state = {textoboton: "Agregar a favoritos" }
+
+        this.state = {textoDescripcion:"Mostrar descripción" , textoBoton: "Agregar a favoritos"}
+    }
+
+    Descrip(){
+        if(this.state.description === false){
+            this.setState({
+                description:true,
+                textoDescripcion:"Ocultar descripción "
+            })
+        } 
+        else{
+            this.setState({
+                description:false,
+                textoDescripcion:"Mostrar descripción"
+            })
+        }
+
     }
     
     componentDidMount (){
@@ -30,6 +47,7 @@ class TarjetaPeliculas extends Component {
 
 
     }
+
     FavoritosPonerSacar(){
         let arrayPersonajes = [this.props.datosPelicula.id];
         let Pelistraidas = localStorage.getItem("pelicula");
@@ -42,6 +60,7 @@ class TarjetaPeliculas extends Component {
             textoboton: "Quitar de favoritos",
           });
         }
+
     
         let PelisFinales = "";
     
@@ -73,13 +92,15 @@ class TarjetaPeliculas extends Component {
         return (
             <section className="PeliculasPopulares">
                 <article className='article'>
-                    <ul>
-                        <Link to = {`/Detallepelicula/id/${this.props.datosPelicula.id}`}>
-                        <img className="Fotos" src={imagen + this.props.datosPelicula.poster_path} alt={this.props.datosPelicula.title} />
-                        </Link>
-                        <h2>{this.props.datosPelicula.title}</h2>
-                        <button onClick={()=>this.FavoritosPonerSacar()} type='button'>{this.state.textoboton}</button>
-                    </ul>
+
+                    <Link to = {`/Detallepelicula/id/${this.props.datosPelicula.id}`}>
+                    <img className="Fotos" src={imagen + this.props.datosPelicula.poster_path} alt={this.props.datosPelicula.title} />
+                    </Link>
+                    <h2>{this.props.datosPelicula.title}</h2>
+                    <button onClick={()=>this.FavoritosPonerSacar()} type='button'>{this.state.textoBoton}</button>
+                    {this.state.description ? <div><p>{this.props.datosPelicula.overview}</p></div>: false}
+                    <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
+
                 </article>
             </section>
         )

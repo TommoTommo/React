@@ -41,11 +41,12 @@ class DetalleSerie extends Component {
                                 <ul>
                                     <li> <h3>Calificación/ raiting:</h3> {this.state.series.vote_average}</li>
                                     <br></br>
-                                    <li> <h3>Generos:</h3> {this.state.series.genres.map((genre, idx) => <li>{genre.name}</li>)} </li>
+                                    <li> <h3>Generos:</h3> {this.state.series.genres.map((genres, idx) => <li className="lista">{genres.name}</li>)} </li>
                                     <br></br>
-                                    <li><h3>Fecha de estreno:</h3> {this.state.series.release_date}</li>
+                                    <li><h3>Fecha de estreno:</h3> {this.state.series.first_air_date}</li>
                                     <br></br>
-                                    <li><p><h3>Sinópsis:</h3>   {this.state.series.overview}</p></li>
+                                    <li><h3>Duracion:</h3>{this.state.series.number_of_seasons} temporadas</li>
+                                    <li><h3>Sinópsis:</h3>   {this.state.series.overview}</li>
                                 </ul>
                             </article>
                         </section>

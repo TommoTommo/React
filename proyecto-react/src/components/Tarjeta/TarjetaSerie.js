@@ -7,7 +7,26 @@ const imagen = "https://image.tmdb.org/t/p/w342";
 class TarjetaSerie extends Component {
     constructor(props) {
         super(props);
-        this.state = {textoboton: "Agregar a favoritos" };
+
+   
+
+        this.state = {textoDescripcion:"Mostrar descripción" , textoBoton: " Agregar a favoritos"}
+    }
+
+    Descrip(){
+        if(this.state.description === false){
+            this.setState({
+                description:true,
+                textoDescripcion:"Ocultar descripción "
+            })
+        } 
+        else{
+            this.setState({
+                description:false,
+                textoDescripcion:"Mostrar descripción"
+            })
+        }
+
     }
 
     componentDidMount (){
@@ -36,7 +55,6 @@ class TarjetaSerie extends Component {
 
 
 
-
             let ArraySeries = [this.props.datosSerie.id];
             let SeriesTraidas = localStorage.getItem("serie");
             let LocasStorage = "";
@@ -45,8 +63,9 @@ class TarjetaSerie extends Component {
               SeriesTraidas = [];
               LocasStorage = JSON.stringify(ArraySeries);
               this.setState({
-                textoboton: "Quitar de favoritos",
+                textoBoton: "Quitar de favoritos",
               });
+
             }
         
             let StorageSeries = "";
@@ -79,34 +98,21 @@ class TarjetaSerie extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
     render(){
         return (
             <section className="SeriesPopulares">
                 <article className='article'>
-                    <ul>
-                        <Link to= {`/Detalleserie/id/${this.props.datosSerie.id}`}>
-                        <img className="Fotos" src={imagen + this.props.datosSerie.poster_path} alt={this.props.datosSerie.title} />
-                        </Link>
-                        <h2>{this.props.datosSerie.name}</h2>
-                        <button onClick={()=>this.FavoritosPonerSacar()} type='button'>{this.state.textoboton}</button>
-                    </ul>
+
+                    <Link to= {`/Detalleserie/id/${this.props.datosSerie.id}`}>
+                    <img className="Fotos" src={imagen + this.props.datosSerie.poster_path} alt={this.props.datosSerie.title} />
+                    </Link>
+                    <h2>{this.props.datosSerie.name}</h2>
+                    <button onClick={()=>this.FavoritosPonerSacar()} type='button'>{this.state.textoBoton}</button>
+                    {this.state.description ? <div><p>{this.props.datosSerie.overview}</p></div>: false}
+                    <button onClick={() =>this.Descrip()} type="button" >{this.state.textoDescripcion}</button>
+
                 </article>
             </section>
         )
