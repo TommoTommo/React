@@ -21,7 +21,6 @@ class Filtro extends Component{
             textoDelInput: eventoEnElInput.target.value
         }, () => this.props.filtrar(this.state.textoDelInput))
 
-
         return true
     }
 
@@ -34,8 +33,6 @@ class Filtro extends Component{
             </form>
         )
     }
-
 }
 
 export default Filtro
-

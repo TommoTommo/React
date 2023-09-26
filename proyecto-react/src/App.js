@@ -1,6 +1,5 @@
 import React from "react";
-
-import  Home from "./screens/Home/Home";
+import Home from "./screens/Home/Home";
 import Favoritos from "./screens/Favoritos/Favoritos";
 import VerTodasSeries from "./screens/Vertodasseries/Vertodasseries";
 import VerTodasPeliculas from "./screens/Peliculaspopulares/Peliculaspopulares";
@@ -8,9 +7,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import DetallePelicula from "./screens/Detalle/DetallePelicula"
 import DetalleSerie from "./screens/Detalle/DetalleSerie"
-import ResultadoBusqueda from "./screens/ResultadoBusqueda/ResultadoBusqueda"
+import ResultadoBusqueda from "./screens/ResultadoBusqueda/ResultadoBusqueda";
 import NotFound from "./components/NotFound/NotFound";
-
 import { Route, Switch } from 'react-router-dom';
 
 function App() {

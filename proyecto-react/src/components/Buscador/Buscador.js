@@ -9,16 +9,17 @@ class Buscador extends Component{
             value: ''
         }
     }
+
     detenerDefault(evento) {
         evento.preventDefault();
-      }
-    
+    }
     
     Guardartexto(event){
         this.setState(
             {value: event.target.value}
             )
     }
+
     render(){
         return(
             <form class="wrap" onSubmit={(e) => this.detenerDefault(e)}>
@@ -34,4 +35,3 @@ class Buscador extends Component{
     }
 }
 export default Buscador;
-

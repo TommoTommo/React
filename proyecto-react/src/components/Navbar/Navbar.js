@@ -4,7 +4,7 @@ import Buscador from "../Buscador/Buscador"
 function Menu() {
     return (
         <ul className="containHeader">
-            <Link to="/">  <img className="logo" src="logo.png" alt="Logo" srcset=""></img> </Link>
+            <Link to="/"><img className="logo" src="logo.png" alt="Logo" srcset=""></img></Link>
             <Link className="titulo-href" to="/">HOME</Link>
             <Link className="titulo-href" to="/Favoritos">FAVORITOS</Link>
             <Link className="titulo-href" to="/Vertodasseries"> SERIES </Link>
@@ -12,8 +12,6 @@ function Menu() {
 
             <Buscador></Buscador>
         </ul >
-
-
     )  
 }
 

@@ -30,7 +30,6 @@ class PeliculasConteiner extends Component {
           )
           : false}
 
-
         {this.props.datosSerie ?
           this.props.datosSerie.map((series) =>
             <TarjetaSerie key={series.id} datosSerie={series} />
@@ -44,7 +43,6 @@ class PeliculasConteiner extends Component {
           )
 
           : false}
-
 
       </section>
     )
