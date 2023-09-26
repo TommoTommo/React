@@ -75,7 +75,7 @@ class TarjetaPeliculas extends Component {
     }
 
     localStorage.setItem("pelicula", LocasStorage);
-    }
+  }
       
   render(){
     return (
