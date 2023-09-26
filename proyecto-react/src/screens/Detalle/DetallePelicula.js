@@ -24,7 +24,6 @@ class DetallePelicula extends Component {
                 })
             })
             .catch(e => console.log(e))
-
     }
 
     render() {
@@ -60,8 +59,5 @@ class DetallePelicula extends Component {
         );
     }
 }
-
-
-
 
 export default DetallePelicula;

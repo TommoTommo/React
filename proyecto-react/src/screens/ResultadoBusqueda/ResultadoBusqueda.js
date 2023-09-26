@@ -35,8 +35,6 @@ class ResultadoBusqueda extends Component{
 
     render() {
         return (
-            
-           
           <section>
             <h1 className="blanco">Tu resultado de búsqueda es: '{this.props.match.params.querry}'</h1>
             {/* Renderizar resultados de películas */}
@@ -52,4 +50,4 @@ class ResultadoBusqueda extends Component{
       }
     }
     
-    export default ResultadoBusqueda;
+export default ResultadoBusqueda;

@@ -10,7 +10,6 @@ class DetalleSerie extends Component {
         }
     }
 
-
     componentDidMount() {
         //busco el id de la serie en cuestion
         let serieId = this.props.match.params.id;

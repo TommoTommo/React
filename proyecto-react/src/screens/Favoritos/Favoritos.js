@@ -11,14 +11,10 @@ class Favoritos extends Component {
              ArraySeriesFav:[] }
 
     }
-    componentDidMount (){       
-         
-
-
+    componentDidMount (){      
         //Traigo el storage de Pelis Y Series, Los guardo en arrays
-        
         let  PelisFav=[];
-    let  SeriesFav=[]
+        let  SeriesFav=[]
         
        let recuperoStoragePelis = localStorage.getItem('pelicula');
             
@@ -46,9 +42,7 @@ class Favoritos extends Component {
                     
                 })
 
-
                 this.setState({
-
                     ArrayPelisFav:this.state.ArrayPelisFav
                 })
             })
@@ -62,11 +56,8 @@ class Favoritos extends Component {
                     if (SeriesFav.includes(infoserie.id)) {
                         this.state.ArraySeriesFav.push(infoserie)
                     }
-                    
                 })
                 this.setState({
-
-
                     ArraySeriesFav: this.state.ArraySeriesFav
                 })
             })

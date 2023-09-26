@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./Home.css"
 import PeliculasConteiner from "../../components/PeliculasConteiner/PeliculasConteiner";
 
-
 class Home extends Component {
     constructor(props) {
         super(props);
